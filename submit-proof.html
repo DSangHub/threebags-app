@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Proof — threebags.app</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <header class="bg-white shadow-sm">
+    <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="logo.jpg" alt="threebags.app" class="h-10">
+      </a>
+      <a href="index.html" class="text-sm text-slate-600 hover:text-amber-600">← Back to Home</a>
+    </div>
+  </header>
+
+  <main class="max-w-xl mx-auto px-4 py-12">
+    <div class="text-center mb-8">
+      <h1 class="text-3xl font-bold mb-2">Submit Proof</h1>
+      <p class="text-slate-600">For non-participating airlines. threebags.app may elect to pay the subscriber directly with valid proof of ticket and boarding pass.</p>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-lg p-8">
+      <form id="proofForm" class="space-y-5">
+        <div>
+          <label class="block text-sm font-medium mb-1">Full Name</label>
+          <input type="text" required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500" placeholder="Name on ticket">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Email</label>
+          <input type="email" required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500" placeholder="you@email.com">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Airline</label>
+          <input type="text" required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500" placeholder="Non-participating airline name">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Flight Number / Route</label>
+          <input type="text" required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500" placeholder="e.g. UA 1234 SFO–JFK">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Extra Bag Fee Paid (approx.)</label>
+          <input type="text" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500" placeholder="$150">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Proof of Ticket</label>
+          <input type="file" accept="image/*,.pdf" class="w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-amber-50 file:text-amber-700 hover:file:bg-amber-100">
+          <p class="text-xs text-slate-400 mt-1">Upload ticket confirmation or e-ticket</p>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Boarding Pass</label>
+          <input type="file" accept="image/*,.pdf" class="w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-amber-50 file:text-amber-700 hover:file:bg-amber-100">
+          <p class="text-xs text-slate-400 mt-1">Upload boarding pass showing the extra bag</p>
+        </div>
+        <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold py-3.5 rounded-xl text-lg">Submit Proof</button>
+      </form>
+
+      <div id="proofSuccess" class="hidden text-center py-8">
+        <i class="fas fa-check-circle text-4xl text-green-500 mb-3"></i>
+        <h3 class="text-xl font-semibold text-green-700">Proof Submitted</h3>
+        <p class="text-slate-600 mt-2">Thank you. We’ll review your ticket and boarding pass. If approved, threebags.app may elect to pay you directly for the extra bag fee.</p>
+      </div>
+    </div>
+
+    <p class="text-center text-xs text-slate-400 mt-6">Reimbursement is at the sole discretion of threebags.app and subject to verification.</p>
+  </main>
+
+  <script>
+    document.getElementById('proofForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.getElementById('proofForm').classList.add('hidden');
+      document.getElementById('proofSuccess').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join the Waiting List — threebags.app</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <header class="bg-white shadow-sm">
+    <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="logo.jpg" alt="threebags.app" class="h-10">
+      </a>
+      <a href="index.html" class="text-sm text-slate-600 hover:text-amber-600">← Back to Home</a>
+    </div>
+  </header>
+
+  <main class="max-w-xl mx-auto px-4 py-16">
+    <div class="text-center mb-8">
+      <h1 class="text-4xl font-bold mb-3">Join the Waiting List</h1>
+      <p class="text-lg text-slate-600">Travel with an extra bag at the weight allowed for a free bag.</p>
+      <p class="mt-2 text-slate-500">Be first to know when threebags.app launches for your preferred departure city.</p>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-lg p-8">
+      <form id="waitlistForm" class="space-y-5">
+        <div>
+          <label class="block text-sm font-medium mb-1">Full Name</label>
+          <input type="text" id="wlName" required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent" placeholder="Your name">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Email</label>
+          <input type="email" id="wlEmail" required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent" placeholder="you@email.com">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Preferred City of Departure</label>
+          <input type="text" id="wlCity" required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent" placeholder="e.g. San Francisco, New York, London, Dubai">
+        </div>
+        <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold py-3.5 rounded-xl text-lg">Join Waiting List</button>
+      </form>
+
+      <div id="wlSuccess" class="hidden text-center py-6">
+        <i class="fas fa-check-circle text-4xl text-green-500 mb-3"></i>
+        <h3 class="text-xl font-semibold text-green-700">You're on the list!</h3>
+        <p class="text-slate-600 mt-2">We'll notify you when threebags.app is available for your departure city and you can travel with an extra bag at free-bag weight.</p>
+      </div>
+    </div>
+
+    <div class="mt-8 text-center text-sm text-slate-500">
+      <p>Domestic & International · Zip-sealed bags · Optional insurance</p>
+      <p class="mt-2">Non-participating airline? threebags.app may elect to pay the subscriber directly with valid proof of ticket and boarding pass. <a href="submit-proof.html" class="text-amber-600 font-medium hover:underline">Submit Proof →</a></p>
+    </div>
+  </main>
+
+  <footer class="text-center text-xs text-slate-400 py-8">
+    threebags.app — Extra checked bag subscription
+  </footer>
+
+  <script>
+    document.getElementById('waitlistForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('wlName').value;
+      const email = document.getElementById('wlEmail').value;
+      const city = document.getElementById('wlCity').value;
+      console.log('Waitlist signup:', { name, email, city });
+      document.getElementById('waitlistForm').classList.add('hidden');
+      document.getElementById('wlSuccess').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
