@@ -27,10 +27,11 @@
         <a href="#pricing" class="hover:text-amber-600">Pricing</a>
         <a href="#features" class="hover:text-amber-600">Features</a>
         <a href="waitlist.html" class="hover:text-amber-600">Waiting List</a>
-        <a href="../skybook/index.html" target="_blank" class="hover:text-amber-600 font-semibold text-blue-600">Search Flights</a>
+        <a href="lounge-pass.html" class="hover:text-amber-600">Lounge Pass</a>
+        <a href="https://www.skyscanner.com/" target="_blank" class="hover:text-amber-600 font-semibold text-blue-600">Search Flights</a>
       </nav>
       <div class="flex items-center gap-3">
-        <a href="../skybook/index.html" target="_blank" class="hidden sm:inline text-sm font-medium text-blue-600 hover:text-blue-800">Search Flights</a>
+        <a href="https://www.skyscanner.com/" target="_blank" class="hidden sm:inline text-sm font-medium text-blue-600 hover:text-blue-800">Search Flights</a>
         <a href="#pricing" class="bg-amber-500 hover:bg-amber-600 text-white px-5 py-2.5 rounded-lg font-semibold text-sm">Get Extra Bag</a>
       </div>
     </div>
@@ -43,7 +44,7 @@
       <p class="text-xl md:text-2xl opacity-90 mb-8">Airlines allow 1 or 2 bags. threebags.app turns that into 2 or 3 — for a simple yearly subscription.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="#pricing" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold px-8 py-4 rounded-xl text-lg">Start from $49.95/year</a>
-        <a href="../skybook/index.html" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-xl text-lg flex items-center justify-center gap-2">
+        <a href="https://www.skyscanner.com/" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-xl text-lg flex items-center justify-center gap-2">
           <i class="fas fa-search"></i> Search Flights
         </a>
         <a href="#how" class="border-2 border-white hover:bg-white hover:text-slate-900 font-semibold px-8 py-4 rounded-xl text-lg">See How It Works</a>
@@ -123,6 +124,7 @@
             <li><i class="fas fa-check mr-2"></i> Unlimited extra bags for the owner</li>
             <li><i class="fas fa-check mr-2"></i> Domestic & international</li>
             <li><i class="fas fa-check mr-2"></i> Zip-seal + prepaid notice to airline</li>
+            <li><i class="fas fa-check mr-2"></i> Apply for Premier Lounge Access Pass at a discount</li>
           </ul>
           <button onclick="selectPlan('unlimited')" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-xl">Choose Unlimited</button>
         </div>
@@ -170,7 +172,7 @@
       </div>
       <p class="text-sm text-slate-500 mb-6 max-w-lg mx-auto">Flying a non-participating airline? threebags.app may elect to pay the subscriber directly with valid proof of ticket and boarding pass. <a href="submit-proof.html" class="text-amber-600 font-medium hover:underline">Submit Proof →</a></p>
       <a href="#pricing" class="inline-block bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold px-10 py-4 rounded-xl text-lg">Subscribe Now</a>
-      <a href="../skybook/index.html" target="_blank" class="inline-block ml-4 bg-blue-600 hover:bg-blue-700 text-white font-bold px-10 py-4 rounded-xl text-lg">Search Flights</a>
+      <a href="https://www.skyscanner.com/" target="_blank" class="inline-block ml-4 bg-blue-600 hover:bg-blue-700 text-white font-bold px-10 py-4 rounded-xl text-lg">Search Flights</a>
     </div>
   </section>
 
@@ -217,7 +219,6 @@
       const name = document.getElementById('wlName').value;
       const email = document.getElementById('wlEmail').value;
       const city = document.getElementById('wlCity').value;
-      // In production this would post to a backend / email service
       console.log('Waitlist signup:', { name, email, city });
       document.getElementById('waitlistForm').classList.add('hidden');
       document.getElementById('wlSuccess').classList.remove('hidden');
