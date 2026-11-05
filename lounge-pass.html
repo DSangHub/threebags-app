@@ -41,6 +41,22 @@
           <label class="block text-sm font-medium mb-1">Preferred Airport / Lounge</label>
           <input type="text" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500" placeholder="e.g. SFO, JFK, DXB">
         </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Bulk Buy — Hours / Time</label>
+          <select required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500">
+            <option value="">Select bulk option</option>
+            <option value="5-hours">5 Hours (single trip window)</option>
+            <option value="10-hours">10 Hours (multi-day / connections)</option>
+            <option value="20-hours">20 Hours (bulk pack)</option>
+            <option value="day-pass">Day Pass (typical 2–3 hr stay)</option>
+            <option value="unlimited-day">Unlimited day access (select lounges)</option>
+          </select>
+          <p class="text-xs text-slate-400 mt-1">Discounted rates for Unlimited subscribers. Most lounges allow 2–3 hours per visit; bulk hours can be used across trips.</p>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Preferred Date / Time Window (optional)</label>
+          <input type="text" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500" placeholder="e.g. 2026-12-15 08:00–12:00 or flexible">
+        </div>
         <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold py-3.5 rounded-xl text-lg">Apply for Discounted Lounge Pass</button>
       </form>
 
